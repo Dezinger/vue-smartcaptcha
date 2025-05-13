@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="19" failures="0" time="0.824">
+  <testsuite name="defer" errors="0" failures="0" skipped="0" timestamp="2025-05-13T15:00:51" time="0.357" tests="4">
+    <testcase classname="defer Return defer object" name="defer Return defer object" time="0.002">
+    </testcase>
+    <testcase classname="defer #resolve Resolve with given value" name="defer #resolve Resolve with given value" time="0.001">
+    </testcase>
+    <testcase classname="defer #resolve Wont resolve twice" name="defer #resolve Wont resolve twice" time="0">
+    </testcase>
+    <testcase classname="defer #resolved Return state" name="defer #resolved Return state" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Smartcaptcha" errors="0" failures="0" skipped="0" timestamp="2025-05-13T15:00:51" time="0.127" tests="3">
+    <testcase classname="Smartcaptcha Should render SmartCAPTCHA" name="Smartcaptcha Should render SmartCAPTCHA" time="0.001">
+    </testcase>
+    <testcase classname="Smartcaptcha Can reset/execute" name="Smartcaptcha Can reset/execute" time="0.001">
+    </testcase>
+    <testcase classname="Smartcaptcha will load smartсaptcha script when `loadSmartсaptchaScript` set to `true`" name="Smartcaptcha will load smartсaptcha script when `loadSmartсaptchaScript` set to `true`" time="0.005">
+    </testcase>
+  </testsuite>
+  <testsuite name="smartсaptcha" errors="0" failures="0" skipped="0" timestamp="2025-05-13T15:00:51" time="0.051" tests="12">
+    <testcase classname="smartсaptcha #createSmartcaptcha #assertLoaded When SmartCAPTCHA not loaded Throw error" name="smartсaptcha #createSmartcaptcha #assertLoaded When SmartCAPTCHA not loaded Throw error" time="0.003">
+    </testcase>
+    <testcase classname="smartсaptcha #createSmartcaptcha #assertLoaded When SmartCAPTCHA loaded Not throw error" name="smartсaptcha #createSmartcaptcha #assertLoaded When SmartCAPTCHA loaded Not throw error" time="0">
+    </testcase>
+    <testcase classname="smartсaptcha #createSmartcaptcha #checkSmartcaptchaLoad When SmartCAPTCHA not loaded Not load SmartCAPTCHA into it" name="smartсaptcha #createSmartcaptcha #checkSmartcaptchaLoad When SmartCAPTCHA not loaded Not load SmartCAPTCHA into it" time="0.001">
+    </testcase>
+    <testcase classname="smartсaptcha #createSmartcaptcha #checkSmartcaptchaLoad When SmartCAPTCHA loaded Load SmartCAPTCHA" name="smartсaptcha #createSmartcaptcha #checkSmartcaptchaLoad When SmartCAPTCHA loaded Load SmartCAPTCHA" time="0">
+    </testcase>
+    <testcase classname="smartсaptcha #createSmartcaptcha #wait When smartсaptcha not loaded Return defered object" name="smartсaptcha #createSmartcaptcha #wait When smartсaptcha not loaded Return defered object" time="0">
+    </testcase>
+    <testcase classname="smartсaptcha #createSmartcaptcha #notify Resolve the deferred" name="smartсaptcha #createSmartcaptcha #notify Resolve the deferred" time="0">
+    </testcase>
+    <testcase classname="smartсaptcha #createSmartcaptcha #render Render SmartCAPTCHA" name="smartсaptcha #createSmartcaptcha #render Render SmartCAPTCHA" time="0">
+    </testcase>
+    <testcase classname="smartсaptcha #createSmartcaptcha #reset When pass widget id Reset SmartCAPTCHA" name="smartсaptcha #createSmartcaptcha #reset When pass widget id Reset SmartCAPTCHA" time="0">
+    </testcase>
+    <testcase classname="smartсaptcha #createSmartcaptcha #reset When not pass widget id Do nothing" name="smartсaptcha #createSmartcaptcha #reset When not pass widget id Do nothing" time="0.001">
+    </testcase>
+    <testcase classname="smartсaptcha #createSmartcaptcha #execute When pass widget id Execute SmartCAPTCHA" name="smartсaptcha #createSmartcaptcha #execute When pass widget id Execute SmartCAPTCHA" time="0">
+    </testcase>
+    <testcase classname="smartсaptcha #createSmartcaptcha #execute When not pass widget id Do nothing" name="smartсaptcha #createSmartcaptcha #execute When not pass widget id Do nothing" time="0">
+    </testcase>
+    <testcase classname="smartсaptcha window.vueSmartcaptchaApiLoaded Load smartCaptcha" name="smartсaptcha window.vueSmartcaptchaApiLoaded Load smartCaptcha" time="0.001">
+    </testcase>
+  </testsuite>
+</testsuites>
