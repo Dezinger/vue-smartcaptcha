@@ -193,8 +193,9 @@ var VueSmartcaptcha = {
     smartcaptcha.checkSmartcaptchaLoad();
 
     var opts = _extends({}, this.$props, {
-      callback: this.emitVerify //'expired-callback': this.emitExpired,
-      //'error-callback': this.emitError
+      callback: this.emitVerify // ,
+      // 'expired-callback': this.emitExpired,
+      // 'error-callback': this.emitError
 
     });
 
@@ -214,7 +215,8 @@ var VueSmartcaptcha = {
     },
     emitVerify: function emitVerify(response) {
       this.$emit('verify', response);
-    }
+    } // ,
+
     /*
     emitExpired () {
       this.$emit('expired')
