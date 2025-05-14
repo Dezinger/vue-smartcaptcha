@@ -1,9 +1,9 @@
-import smartсaptcha, { WIDGET_ID } from '../smartсaptcha-wrapper'
+import smartcaptcha, { WIDGET_ID } from '../smartcaptcha-wrapper'
 
 import Smartcaptcha from '../Smartcaptcha'
 import { mount } from '@vue/test-utils'
 
-jest.mock('../smartсaptcha-wrapper')
+jest.mock('../smartcaptcha-wrapper')
 
 const SITE_KEY = 'sitekey'
 const createWrapper = propsData => {
@@ -14,9 +14,9 @@ describe('Smartcaptcha', () => {
   const wrapper = createWrapper({ sitekey: SITE_KEY })
 
   it('Should render SmartCAPTCHA', () => {
-    expect(smartсaptcha.checkSmartcaptchaLoad).toBeCalled()
-    expect(smartсaptcha.render.mock.calls[0][0]).toBe(wrapper.vm.$el)
-    expect(smartсaptcha.render.mock.calls[0][1]).toMatchSnapshot('SmartCAPTCHA options')
+    expect(smartcaptcha.checkSmartcaptchaLoad).toBeCalled()
+    expect(smartcaptcha.render.mock.calls[0][0]).toBe(wrapper.vm.$el)
+    expect(smartcaptcha.render.mock.calls[0][1]).toMatchSnapshot('SmartCAPTCHA options')
   })
 
   /*
@@ -31,21 +31,21 @@ describe('Smartcaptcha', () => {
   })
   */
   it('Can reset/execute', () => {
-    expect(smartсaptcha.reset).not.toBeCalled()
+    expect(smartcaptcha.reset).not.toBeCalled()
     wrapper.vm.reset()
-    expect(smartсaptcha.reset).toBeCalledWith(WIDGET_ID)
+    expect(smartcaptcha.reset).toBeCalledWith(WIDGET_ID)
 
-    expect(smartсaptcha.execute).not.toBeCalled()
+    expect(smartcaptcha.execute).not.toBeCalled()
     wrapper.vm.execute()
-    expect(smartсaptcha.execute).toBeCalledWith(WIDGET_ID)
+    expect(smartcaptcha.execute).toBeCalledWith(WIDGET_ID)
   })
 
-  it('will load smartсaptcha script when `loadSmartсaptchaScript` set to `true`', () => {
+  it('will load smartcaptcha script when `loadSmartcaptchaScript` set to `true`', () => {
     const id = 'SMARTCAPTCHA_SCRIPT_ID'
     createWrapper({
       sitekey: SITE_KEY,
-      loadSmartсaptchaScript: true,
-      smartсaptchaScriptId: id
+      loadSmartcaptchaScript: true,
+      smartcaptchaScriptId: id
     })
     expect(document.getElementById(id)).not.toBe(null)
   })

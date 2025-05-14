@@ -1,4 +1,4 @@
-import smartсaptcha from './smartсaptcha-wrapper'
+import smartcaptcha from './smartcaptcha-wrapper'
 
 export default {
   name: 'VueSmartcaptcha',
@@ -29,26 +29,26 @@ export default {
     hideShield: {
       type: Boolean
     },
-    loadSmartсaptchaScript: {
+    loadSmartcaptchaScript: {
       type: Boolean,
       default: false
     },
-    smartсaptchaScriptId: {
+    smartcaptchaScriptId: {
       type: String,
       default: '__SMARTCAPTCHA_SCRIPT'
     },
-    smartсaptchaHost: {
+    smartcaptchaHost: {
       type: String,
       default: 'smartcaptcha.yandexcloud.net'
     }
   },
   beforeMount () {
-    if (this.loadSmartсaptchaScript) {
-      if (!document.getElementById(this.smartсaptchaScriptId)) {
+    if (this.loadSmartcaptchaScript) {
+      if (!document.getElementById(this.smartcaptchaScriptId)) {
         // Note: vueSmartcaptchaApiLoaded load callback name is per the latest documentation
         const script = document.createElement('script')
-        script.id = this.smartсaptchaScriptId
-        script.src = `https://${this.smartсaptchaHost}/captcha.js?render=onload&onload=vueSmartcaptchaApiLoaded`
+        script.id = this.smartcaptchaScriptId
+        script.src = `https://${this.smartcaptchaHost}/captcha.js?render=onload&onload=vueSmartcaptchaApiLoaded`
         script.async = true
         script.defer = true
 
@@ -57,7 +57,7 @@ export default {
     }
   },
   mounted () {
-    smartсaptcha.checkSmartcaptchaLoad()
+    smartcaptcha.checkSmartcaptchaLoad()
     const opts = {
       ...this.$props,
       callback: this.emitVerify// ,
@@ -65,17 +65,17 @@ export default {
       // 'error-callback': this.emitError
     }
     const container = this.$slots.default ? this.$el.children[0] : this.$el
-    smartсaptcha.render(container, opts, id => {
+    smartcaptcha.render(container, opts, id => {
       this.$widgetId = id
       this.$emit('render', id)
     })
   },
   methods: {
     reset () {
-      smartсaptcha.reset(this.$widgetId)
+      smartcaptcha.reset(this.$widgetId)
     },
     execute () {
-      smartсaptcha.execute(this.$widgetId)
+      smartcaptcha.execute(this.$widgetId)
     },
     emitVerify (response) {
       this.$emit('verify', response)

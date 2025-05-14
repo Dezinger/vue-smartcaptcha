@@ -1,4 +1,4 @@
-import smartсaptcha, { createSmartcaptcha } from '../smartсaptcha-wrapper'
+import smartcaptcha, { createSmartcaptcha } from '../smartcaptcha-wrapper'
 
 const WIDGET_ID = 'widgetId'
 function createMock () {
@@ -9,15 +9,15 @@ function createMock () {
   }
 }
 
-describe('smartсaptcha', () => {
+describe('smartcaptcha', () => {
   describe('#createSmartcaptcha', () => {
     let ins
-    let smartсaptchaMock
+    let smartcaptchaMock
 
     beforeEach(() => {
-      smartсaptchaMock = createMock()
+      smartcaptchaMock = createMock()
       ins = createSmartcaptcha()
-      window.smartCaptcha = smartсaptchaMock
+      window.smartCaptcha = smartcaptchaMock
     })
 
     afterEach(() => delete window.smartCaptcha)
@@ -68,7 +68,7 @@ describe('smartсaptcha', () => {
     })
 
     describe('#wait', () => {
-      describe('When smartсaptcha not loaded', () => {
+      describe('When smartcaptcha not loaded', () => {
         it('Return defered object', () => {
           const spy = jest.fn()
           // Since it return thenable, not Promise. Here must wrap it as Promise
@@ -97,7 +97,7 @@ describe('smartсaptcha', () => {
         ins.notify()
 
         return ins.render(ele, { sitekey }, widgetId => {
-          expect(smartсaptchaMock.render).toBeCalled()
+          expect(smartcaptchaMock.render).toBeCalled()
           expect(widgetId).toBe(WIDGET_ID)
         })
       })
@@ -108,7 +108,7 @@ describe('smartсaptcha', () => {
         it('Reset SmartCAPTCHA', () => {
           ins.reset(WIDGET_ID)
 
-          expect(smartсaptchaMock.reset).toBeCalled()
+          expect(smartcaptchaMock.reset).toBeCalled()
         })
       })
 
@@ -116,7 +116,7 @@ describe('smartсaptcha', () => {
         it('Do nothing', () => {
           ins.reset()
 
-          expect(smartсaptchaMock.reset).not.toBeCalled()
+          expect(smartcaptchaMock.reset).not.toBeCalled()
         })
       })
 
@@ -131,7 +131,7 @@ describe('smartсaptcha', () => {
         it('Execute SmartCAPTCHA', () => {
           ins.execute(WIDGET_ID)
 
-          expect(smartсaptchaMock.execute).toBeCalled()
+          expect(smartcaptchaMock.execute).toBeCalled()
         })
       })
 
@@ -139,7 +139,7 @@ describe('smartсaptcha', () => {
         it('Do nothing', () => {
           ins.execute()
 
-          expect(smartсaptchaMock.execute).not.toBeCalled()
+          expect(smartcaptchaMock.execute).not.toBeCalled()
         })
       })
 
@@ -152,7 +152,7 @@ describe('smartсaptcha', () => {
   describe('window.vueSmartcaptchaApiLoaded', () => {
     it('Load smartCaptcha', () => {
       window.vueSmartcaptchaApiLoaded()
-      expect(() => smartсaptcha.assertLoaded()).not.toThrow()
+      expect(() => smartcaptcha.assertLoaded()).not.toThrow()
     })
   })
 })

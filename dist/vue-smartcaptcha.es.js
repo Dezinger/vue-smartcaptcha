@@ -161,26 +161,26 @@ var VueSmartcaptcha = {
     hideShield: {
       type: Boolean
     },
-    loadSmartсaptchaScript: {
+    loadSmartcaptchaScript: {
       type: Boolean,
       "default": false
     },
-    smartсaptchaScriptId: {
+    smartcaptchaScriptId: {
       type: String,
       "default": '__SMARTCAPTCHA_SCRIPT'
     },
-    smartсaptchaHost: {
+    smartcaptchaHost: {
       type: String,
       "default": 'smartcaptcha.yandexcloud.net'
     }
   },
   beforeMount: function beforeMount() {
-    if (this.loadSmartсaptchaScript) {
-      if (!document.getElementById(this.smartсaptchaScriptId)) {
+    if (this.loadSmartcaptchaScript) {
+      if (!document.getElementById(this.smartcaptchaScriptId)) {
         // Note: vueSmartcaptchaApiLoaded load callback name is per the latest documentation
         var script = document.createElement('script');
-        script.id = this.smartсaptchaScriptId;
-        script.src = "https://" + this.smartсaptchaHost + "/captcha.js?render=onload&onload=vueSmartcaptchaApiLoaded";
+        script.id = this.smartcaptchaScriptId;
+        script.src = "https://" + this.smartcaptchaHost + "/captcha.js?render=onload&onload=vueSmartcaptchaApiLoaded";
         script.async = true;
         script.defer = true;
         document.head.appendChild(script);
