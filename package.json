@@ -1,6 +1,6 @@
 {
   "name": "vue-smartcaptcha",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Smartcaptcha vue component",
   "types": "types/index.d.ts",
   "module": "dist/vue-smartcaptcha.es.js",
@@ -20,6 +20,7 @@
     "vue",
     "component",
     "vue-component",
+    "captcha",
     "yandex-smartcaptcha",
     "smartcaptcha"
   ],
